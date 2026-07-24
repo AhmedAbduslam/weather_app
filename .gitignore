@@ -44,6 +44,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Environment config (real values; keep env/example.json committed)
-/env/*.json
-!/env/example.json
+# Environment config: env/*.json would normally be ignored here (real API
+# keys), but they are committed on purpose so the project runs out of the box.

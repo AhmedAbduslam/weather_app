@@ -53,13 +53,18 @@ with `--dart-define-from-file` and read via `String.fromEnvironment` in
 
 Config files live in `env/`:
 
-| File | Purpose | Committed? |
-| --- | --- | --- |
-| `env/example.json` | Template with placeholder values | Yes |
-| `env/dev.json` | Development values | No (gitignored) |
-| `env/prod.json` | Production values | No (gitignored) |
+| File | Purpose |
+| --- | --- |
+| `env/example.json` | Template with placeholder values |
+| `env/dev.json` | Development values |
+| `env/prod.json` | Production values |
 
-Setup: copy the template and fill in your key from [weatherapi.com](https://www.weatherapi.com/):
+> **Note:** In a real project, `env/dev.json` and `env/prod.json` should be
+> gitignored (only the `example.json` template committed) so API keys never
+> land in version control. They are committed here **on purpose** so the
+> project can be cloned and run immediately without any extra setup.
+
+If you want to use your own key from [weatherapi.com](https://www.weatherapi.com/), copy the template and fill it in:
 
 ```
 cp env/example.json env/dev.json
